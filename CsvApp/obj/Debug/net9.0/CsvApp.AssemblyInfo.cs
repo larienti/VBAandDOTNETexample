@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsvApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+718efdac0a929dffd0cc0f108fa442a5f0c05c7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b04a5588ab0e8a7edcfffc2369152356b732db14")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsvApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsvApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
