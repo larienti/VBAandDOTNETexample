@@ -1,0 +1,67 @@
+﻿@model List<CsvApp.Models.Chemical>
+
+<h1>Upload CSV and Display Data</h1>
+
+<form asp-action="UploadCsv" method="post" enctype="multipart/form-data">
+    <label for="csvFile">Upload CSV:</label>
+    <input type="file" name="csvFile" />
+    <button type="submit">Upload</button>
+</form>
+
+<hr />
+
+@if (ViewBag.Message != null)
+{
+    <div style="color: green;">
+        <strong>@ViewBag.Message</strong>
+    </div>
+}
+
+@if (ViewBag.TotalCost != null && ViewBag.NaturalPercentage != null)
+{
+    <div style="margin-top: 20px;">
+        <h3>Command Results:</h3>
+        <p><strong>Total Cost:</strong> @((double)ViewBag.TotalCost)</p>
+        <p><strong>Total Parts:</strong> @((double)ViewBag.TotalParts)</p>
+        <p><strong>Natural Percentage:</strong> @((double)ViewBag.NaturalPercentage)</p>
+        <p><strong>Is Above 80% Natural by Parts:</strong> @(ViewBag.IsAbove80PercentNatural ? "Yes" : "No")</p>
+    </div>
+}
+
+@if (Model.Any())
+{
+    <h2>Uploaded Data</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Code</th>
+                <th>Natural</th>
+                <th>CAS#</th>
+                <th>Parts</th>
+                <th>Cost</th>
+                <th>Latest Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td>@row.Code</td>
+                    <td>@(row.Natural ? "Yes" : "No")</td>
+                    <td>@row.CAS</td>
+                    <td>@row.Parts</td>
+                    <td>@row.Cost.ToString("C")</td>
+                    <td>@row.LatestDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data uploaded yet.</p>
+}
+
+<form asp-action="RunCommand" method="post">
+    <button type="submit" class="btn btn-primary">Run Command</button>
+</form>
