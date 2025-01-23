@@ -102,3 +102,4 @@
 /Users/larsa/larsDotNet/CsvApp/obj/Debug/net9.0/CsvApp.pdb
 /Users/larsa/larsDotNet/CsvApp/obj/Debug/net9.0/CsvApp.genruntimeconfig.cache
 /Users/larsa/larsDotNet/CsvApp/obj/Debug/net9.0/ref/CsvApp.dll
+/Users/larsa/larsDotNet/CsvApp/obj/Debug/net9.0/CsvApp.sourcelink.json
