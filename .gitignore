@@ -1,0 +1,5 @@
+# Exclude Visual Studio Code settings
+.vscode/
+
+# Exclude macOS .DS_Store files
+.DS_Store
