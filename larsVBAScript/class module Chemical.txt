@@ -1,0 +1,8 @@
+Option Explicit
+
+Public Code As String
+Public Natural As Boolean
+Public CAS As String
+Public Parts As Long
+Public Cost As Double
+Public LatestDate As Date
